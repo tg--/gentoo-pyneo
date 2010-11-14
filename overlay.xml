@@ -2,10 +2,10 @@
 <layman>
  <overlay
    type = "git"
-   src = "git://gitorious.org/thomasg/gentoo-pyneo.git"
+   src = "git://gitorious.org/tg/gentoo-pyneo.git"
    contact = "thomas@gstaedtner.net (mail or xmpp)"
    name = "pyneo" >
-  <link>http://gitorious.org/thomasg/gentoo-pyneo</link>
+  <link>http://gitorious.org/tg/gentoo-pyneo</link>
   <description>Pyneo overlay</description>
  </overlay>
 </layman>
