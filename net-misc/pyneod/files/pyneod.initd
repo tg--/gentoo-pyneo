@@ -9,7 +9,7 @@ depend() {
 
 start() {
 	ebegin "Starting pyneod"
-	start-stop-daemon --start --pidfile /var/run/pyneod.pid \
+	start-stop-daemon --start -m --pidfile /var/run/pyneod.pid \
 		--background --quiet --exec /usr/bin/python -- \
 		-OO /usr/share/pyneod/pyneod.py
 	eend $?

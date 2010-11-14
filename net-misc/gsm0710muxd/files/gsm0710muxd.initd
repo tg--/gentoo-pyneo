@@ -9,7 +9,7 @@ depend() {
 
 start() {
 	ebegin "Starting gsm0710muxd"
-	start-stop-daemon --start --pidfile /var/run/gsm0710muxd.pid \
+	start-stop-daemon --start -m --pidfile /var/run/gsm0710muxd.pid \
 		--background --quiet --exec /usr/sbin/gsm0710muxd -- \
 		-x $SYSFS -s $SERIAL -a 2 -f 100
 	eend $?
