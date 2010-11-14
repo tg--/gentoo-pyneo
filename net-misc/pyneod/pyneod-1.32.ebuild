@@ -13,7 +13,7 @@ SRC_URI="http://git.pyneo.org/browse/cgit/pyneo/snapshot/pyneo-1.32.tar.gz"
 
 LICENSE="GPLv3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~arm"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools
@@ -25,10 +25,11 @@ DEPEND="dev-python/setuptools
 		dev-python/pyserial
 		dev-python/gst-python
 		dev-python/feedparser
-		dev-python/python-pyneo
+		dev-python/python-pyneo"
+RDEPEND="${DEPEND}
 		media-libs/gst-plugins-base
 		net-dialup/ppp
-		net-wireless/bluez"
-RDEPEND="${DEPEND}"
+		net-wireless/bluez
+		net-misc/gsm0710muxd"
 
 S=${WORKDIR}/pyneo-${PV}/${PN}
