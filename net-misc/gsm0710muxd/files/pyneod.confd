@@ -1,0 +1,7 @@
+# gsm0710muxd init configuration
+
+# Used devices in sysfs:
+SYSFS="/sys/bus/platform/devices/*-pm-gsm.0"
+
+# Serial console / Modem interface:
+SERIAL="/dev/ttySAC0"

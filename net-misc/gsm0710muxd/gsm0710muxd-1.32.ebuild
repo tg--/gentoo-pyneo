@@ -20,4 +20,6 @@ S=${WORKDIR}/pyneo-${PV}/${PN}
 
 src_install() {
 	emake DESTDIR="${D}" install || die "Install failed"
+	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
+	newconfd "${FILESDIR}/${PN}.confd" ${PN} || die
 }
