@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<layman>
+ <overlay
+   type = "git"
+   src = "git://gitorious.org/thomasg/gentoo-pyneo.git"
+   contact = "thomas@gstaedtner.net (mail or xmpp)"
+   name = "pyneo" >
+  <link>http://gitorious.org/thomasg/gentoo-pyneo</link>
+  <description>Pyneo overlay</description>
+ </overlay>
+</layman>
+
