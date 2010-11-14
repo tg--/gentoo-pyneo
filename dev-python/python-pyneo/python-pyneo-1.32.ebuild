@@ -13,7 +13,7 @@ SRC_URI="http://git.pyneo.org/browse/cgit/pyneo/snapshot/pyneo-1.32.tar.gz"
 
 LICENSE="GPLv3"
 SLOT="0"
-KEYWORDS="~x86 ~amd64 ~arm"
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="dev-python/setuptools
