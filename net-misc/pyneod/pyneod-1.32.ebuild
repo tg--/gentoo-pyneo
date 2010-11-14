@@ -33,3 +33,9 @@ RDEPEND="${DEPEND}
 		net-misc/gsm0710muxd"
 
 S=${WORKDIR}/pyneo-${PV}/${PN}
+
+src_install() {
+	emake DESTDIR="${D}" install || die "install failed"
+
+	newinitd "${FILESDIR}/{$PN}.initd" ${PN} || die
+}
