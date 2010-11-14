@@ -17,3 +17,12 @@ DEPEND="dev-libs/dbus-glib"
 RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/pyneo-${PV}/${PN}
+
+src_compile() {
+	econf || die "could not configure"
+	emake || die "emake failed"
+}
+
+src_install() {
+	make DESTDIR=${D} install || die "install failed"
+}
