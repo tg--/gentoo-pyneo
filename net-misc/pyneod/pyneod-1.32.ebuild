@@ -35,7 +35,6 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/pyneo-${PV}/${PN}
 
 src_install() {
-	emake DESTDIR="${D}" install || die "install failed"
-
+	distutils_src_install || die "install failed"
 	newinitd "${FILESDIR}/{$PN}.initd" ${PN} || die
 }
