@@ -1,0 +1,22 @@
+#!/sbin/runscript
+# Copyright 1999-2010 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+depend() {
+	need dbus gsm0710muxd
+}
+
+start() {
+	ebegin "Starting pyneod"
+	start-stop-daemon --start --pidfile /var/run/pyneod.pid \
+		--background --quiet --exec /usr/bin/python -- \
+		-OO /usr/share/pyneod/pyneod.py
+	eend $?
+}
+
+stop() {
+	ebegin "Stopping pyneod"
+	start-stop-daemon --stop --pidfile /var/run/pyneod.pid
+	eend $?
+}
