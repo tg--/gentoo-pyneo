@@ -18,8 +18,6 @@ RDEPEND="${DEPEND}"
 
 S=${WORKDIR}/pyneo-${PV}/${PN}
 
-src_compile() {
-	./autogen.sh || die "autogen.sh failed"
-	econf || die "could not configure"
-	emake || die "emake failed"
+src_install() {
+	emake DESTDIR="${D}" install || die "Install failed"
 }
