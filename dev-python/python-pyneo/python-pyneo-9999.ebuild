@@ -24,4 +24,12 @@ DEPEND="dev-python/setuptools
 		dev-python/pysqlite"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${PN}/${PN}
+src_compile() {
+		cd ${S}/${PN}
+		distutils_src_compile || die "install failed"
+}
+
+src_install() {
+		cd ${S}/${PN}
+		distutils_src_install || die "install failed"
+}
