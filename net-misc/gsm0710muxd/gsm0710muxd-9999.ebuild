@@ -19,12 +19,19 @@ IUSE=""
 DEPEND="dev-libs/dbus-glib"
 RDEPEND="${DEPEND}"
 
+src_configure() {
+		cd ${S}/${PN}
+		./autogen.sh
+		econf || die "Configure failed"
+}
+
 src_compile() {
 		cd ${S}/${PN}
 		emake || die "Compile failed"
 }
 
 src_install() {
+		cd ${S}/${PN}
 		emake DESTDIR="${D}" install || die "Install failed"
 		newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 		newconfd "${FILESDIR}/${PN}.confd" ${PN} || die
