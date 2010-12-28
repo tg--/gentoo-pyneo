@@ -9,7 +9,7 @@ inherit distutils
 DESCRIPTION="Pyneo is a suite of daemons implementing functionality for mobile
 devices"
 HOMEPAGE="http://www.pyneo.org/"
-SRC_URI="http://git.pyneo.org/browse/cgit/pyneo/snapshot/pyneo-1.32.tar.gz"
+SRC_URI="http://gstaedtner.net/pyneo/packages/pyneo-1.32.tar.gz"
 
 LICENSE="GPLv3"
 SLOT="0"
