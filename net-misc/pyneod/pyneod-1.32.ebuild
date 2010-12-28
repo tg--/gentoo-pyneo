@@ -35,7 +35,7 @@ RDEPEND="${DEPEND}
 S=${WORKDIR}/pyneo-${PV}/${PN}
 
 src_install() {
-	cd ${S}
-	distutils_src_install || die "install failed"
-	newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
+		cd ${S}
+		distutils_src_install || die "install failed"
+		newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 }
