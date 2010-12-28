@@ -4,7 +4,7 @@
 
 EAPI=3
 
-inherit distutils
+inherit distutils eutils git
 
 DESCRIPTION="Pyneo is a suite of daemons implementing functionality for mobile
 devices"
@@ -34,12 +34,12 @@ RDEPEND="${DEPEND}
 		net-misc/gsm0710muxd"
 
 src_compile() {
-		cd ${S}/${PN}
+		cd ${S}/${EGIT_PROJECT}-${PN}
 		distutils_src_compile || die "install failed"
 }
 
 src_install() {
-		cd ${S}/${PN}
+		cd ${S}/${EGIT_PROJECT}-${PN}
 		distutils_src_install || die "install failed"
 		newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 }
