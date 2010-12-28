@@ -10,6 +10,7 @@ DESCRIPTION="Pyneo is a suite of daemons implementing functionality for mobile
 devices"
 HOMEPAGE="http://www.pyneo.org/"
 EGIT_REPO_URI="http://git.pyneo.org/browse/cgit/pyneo/"
+EGIT_PROJECT="pyneo"
 
 LICENSE="GPLv3"
 SLOT="0"
