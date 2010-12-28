@@ -24,4 +24,4 @@ DEPEND="dev-python/setuptools
 		dev-python/pysqlite"
 RDEPEND="${DEPEND}"
 
-S=${WORKDIR}/${PN}
+S=${WORKDIR}/${PN}/${PN}
