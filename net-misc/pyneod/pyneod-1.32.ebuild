@@ -34,6 +34,11 @@ RDEPEND="${DEPEND}
 
 S=${WORKDIR}/pyneo-${PV}/${PN}
 
+pkg_setup() {
+		enewgroup pyneo
+		enewuser pyneo -1 /bin/sh /var/lib/pyneo pyneo
+}
+
 src_compile() {
 		cd ${S}
 		distutils_src_compile || die "install failed"
@@ -42,5 +47,13 @@ src_compile() {
 src_install() {
 		cd ${S}
 		distutils_src_install || die "install failed"
+		keepdir /var/lib/pyneo
+		fowners pyneo:pyneo /var/lib/pyneo
 		newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
+		insinto /etc
+		doins "${FILESDIR}/${PN}.conf" || die "installing config files failed"
+}
+
+pkg_postinst() {
+		einfo "If you want to use Pyneo, make sure to join the group 'pyneo'"
 }
