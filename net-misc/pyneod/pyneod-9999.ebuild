@@ -46,10 +46,11 @@ src_compile() {
 src_install() {
 		cd ${S}/${EGIT_PROJECT}-${PN}
 		distutils_src_install || die "install failed"
+		keepdir /var/lib/pyneo
 		fowners pyneo:pyneo /var/lib/pyneo
 		newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 		insinto /etc
-		doins "${FILESDIR}/${PN}.conf" || die "installing config files failed"
+		doins "${FILESDIR}/${PN}.ini" || die "installing config files failed"
 }
 
 pkg_postinst() {

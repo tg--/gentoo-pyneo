@@ -51,7 +51,7 @@ src_install() {
 		fowners pyneo:pyneo /var/lib/pyneo
 		newinitd "${FILESDIR}/${PN}.initd" ${PN} || die
 		insinto /etc
-		doins "${FILESDIR}/${PN}.conf" || die "installing config files failed"
+		doins "${FILESDIR}/${PN}.ini" || die "installing config files failed"
 }
 
 pkg_postinst() {
