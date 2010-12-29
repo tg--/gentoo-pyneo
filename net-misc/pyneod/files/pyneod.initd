@@ -13,7 +13,7 @@ start() {
 	ebegin "Starting pyneod"
 	start-stop-daemon --start -m --pidfile /var/run/pyneod.pid \
 		--background --quiet --exec /usr/bin/python -- \
-		--user ${PYNEO_USER}-OO /usr/share/pyneod/pyneod.py
+		--user ${PYNEO_USER} -OO /usr/share/pyneod/pyneod.py
 	eend $?
 }
 
