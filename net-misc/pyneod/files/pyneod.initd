@@ -3,7 +3,7 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-PYNEO_USER="pyneo"
+#PYNEO_USER="pyneo"
 
 depend() {
 	need dbus gsm0710muxd
@@ -13,7 +13,7 @@ start() {
 	ebegin "Starting pyneod"
 	start-stop-daemon --start -m --pidfile /var/run/pyneod.pid \
 		--background --quiet --exec /usr/bin/python -- \
-		--user ${PYNEO_USER} -OO /usr/share/pyneod/pyneod.py
+		-OO /usr/share/pyneod/pyneod.py
 	eend $?
 }
 
