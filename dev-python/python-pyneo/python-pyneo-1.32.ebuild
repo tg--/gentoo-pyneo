@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -6,8 +6,7 @@ EAPI=3
 
 inherit distutils
 
-DESCRIPTION="Pyneo is a suite of daemons implementing functionality for mobile
-devices"
+DESCRIPTION="Helper library for the pyneo framework."
 HOMEPAGE="http://www.pyneo.org/"
 SRC_URI="http://gstaedtner.net/pyneo/packages/pyneo-1.32.tar.gz"
 
