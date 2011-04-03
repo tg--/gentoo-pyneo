@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -9,7 +9,7 @@ inherit distutils
 DESCRIPTION="Pyneo is a suite of daemons implementing functionality for mobile
 devices"
 HOMEPAGE="http://www.pyneo.org/"
-SRC_URI="http://gstaedtner.net/pyneo/packages/pyneo-1.32.tar.gz"
+SRC_URI="http://git.pyneo.org/browse/cgit/pyneo-pyneod/snapshot/pyneo-${P}.tar.gz"
 
 LICENSE="GPLv3"
 SLOT="0"
@@ -32,7 +32,7 @@ RDEPEND="${DEPEND}
 		net-wireless/bluez
 		net-misc/gsm0710muxd"
 
-S=${WORKDIR}/pyneo-${PV}/${PN}
+S=${WORKDIR}/pyneo-${P}
 
 pkg_setup() {
 		enewgroup pyneo

@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -9,7 +9,7 @@ inherit distutils eutils git
 DESCRIPTION="Pyneo is a suite of daemons implementing functionality for mobile
 devices"
 HOMEPAGE="http://www.pyneo.org/"
-EGIT_REPO_URI="http://git.pyneo.org/browse/cgit/pyneo/"
+EGIT_REPO_URI="http://git.pyneo.org/browse/cgit/pyneo-pyneod/"
 EGIT_PROJECT="pyneo"
 
 LICENSE="GPLv3"
@@ -39,12 +39,12 @@ pkg_setup() {
 }
 
 src_compile() {
-		cd ${S}/${EGIT_PROJECT}-${PN}
+		cd ${S}
 		distutils_src_compile || die "install failed"
 }
 
 src_install() {
-		cd ${S}/${EGIT_PROJECT}-${PN}
+		cd ${S}
 		distutils_src_install || die "install failed"
 		keepdir /var/lib/pyneo
 		fowners pyneo:pyneo /var/lib/pyneo
