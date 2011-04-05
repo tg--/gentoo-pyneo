@@ -1,5 +1,5 @@
 #!/sbin/runscript
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -15,6 +15,7 @@ start() {
 	start-stop-daemon --start -m --pidfile /var/run/pyneod.pid \
 		--background --quiet --exec /usr/bin/python -- \
 		-OO /usr/share/pyneod/pyneod.py
+	einfo "For Ofono support you have to start Ofono manually or add it to a runlevel."
 	eend $?
 }
 
