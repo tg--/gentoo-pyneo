@@ -19,5 +19,8 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-DEPEND=">=net-misc/pyneod-9999"
+DEPEND=">=net-misc/pyneod-9999
+		dev-python/python-e_dbus
+		dev-python/python-ecore
+		dev-python/python-evas"
 RDEPEND="${DEPEND}"
