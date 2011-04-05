@@ -21,6 +21,6 @@ IUSE=""
 
 DEPEND=">=net-misc/pyneod-9999
 		dev-python/python-e_dbus
-		dev-python/python-ecore
+		dev-python/python-ecore[evas]
 		dev-python/python-evas"
 RDEPEND="${DEPEND}"
