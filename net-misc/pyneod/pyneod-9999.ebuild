@@ -15,7 +15,7 @@ EGIT_PROJECT="pyneo"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="hbci +ofono +rss -audio"
+IUSE="hbci +ofono +rss +audio"
 
 DEPEND="dev-python/setuptools
 		dev-lang/python[gdbm]
