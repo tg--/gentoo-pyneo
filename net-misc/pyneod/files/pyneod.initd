@@ -6,7 +6,8 @@
 #PYNEO_USER="pyneo"
 
 depend() {
-	need dbus gsm0710muxd
+	need dbus
+	use ofono
 }
 
 start() {
