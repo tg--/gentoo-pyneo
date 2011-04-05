@@ -15,7 +15,7 @@ EGIT_PROJECT="pyneo"
 LICENSE="GPLv3"
 SLOT="0"
 KEYWORDS="~amd64"
-IUSE="hbci +ofono"
+IUSE="hbci +ofono +rss"
 
 DEPEND="dev-python/setuptools
 		dev-lang/python[gdbm]
@@ -32,7 +32,8 @@ RDEPEND="${DEPEND}
 		net-dialup/ppp
 		net-wireless/bluez
 		ofono? ( net-misc/ofono )"
-PDEPEND="hbci? ( net-misc/pyneo-pybankd )"
+PDEPEND="hbci? ( net-misc/pyneo-pybankd )
+		rss? ( net-misc/pyneo-pyrssd )"
 
 pkg_setup() {
 		enewgroup pyneo
